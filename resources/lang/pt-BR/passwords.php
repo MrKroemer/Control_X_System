@@ -1,0 +1,19 @@
+<?php
+
+return [
+    /*
+    |--------------------------------------------------------------------------------------|
+    | Password Reminder Language Lines                                                     |
+    |--------------------------------------------------------------------------------------| 
+    | The following language lines are the default lines which match reasons               | 
+    | that are given by the password broker for a password update attempt                  |
+    | has failed, such as for an invalid new password.                                     |
+    |--------------------------------=-----------------------------------------------------|
+    */
+    'passwword' => 'A senha deve conter pelo menos seis caracteres. ',
+    'reset'     => 'Sua senha foi redefinida!',
+    'sent'      => 'Enviamos um link para redefinir a sua senha por e-mail.',
+    'token'     => 'Esse código de redefinição de senha é inválido.',
+    'user'      => 'Não conseguimos encontrar nenhum usuário co o endereço de e-mail informado.',
+
+];
