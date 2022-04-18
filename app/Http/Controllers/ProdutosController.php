@@ -17,39 +17,38 @@ class ProdutosController extends Controller
     
               $produtos = DB::select('select * from produtos');
 
-              $html = '<h2 style="background-color: blue; color: white; font-wigth:bold; width:25%;">Configuração de rotas para os produtos</h2>';
-              foreach($produtos as $produto){
+              $estilos = '<style>'
+                        . '.td 
+                        {
+                            color:blue;
+                        }'
+                        .'</style>';
+
+              $html = '<h2 style="background-color: blue; color: white; font-wigth:bold; width:32.5%; text-align:center;">Configuração de rotas para os produtos</h2>';
+
+              $html .= '<table style="border: 1px solid black;">'
+                    .  '<th style="font-weight: bold; color:blue; border: 1px solid black; text-align:center;"> Nome'      . '</th>'
+                    .  '<th style="font-weight: bold; color:blue; border: 1px solid black; text-align:center;"> Descrição' . '</th>'
+                    .  '<th style="color:blue; border: 1px solid black; text-align:center;"> Quantidade em estoque'        . '</th>';
               
-                     $html .= '<ul>';
-                     $html .= '<li style="font-weight: bold; color:blue;"> Nome -> ' . $produto->nome . '</li>';
-                     $html .= '<li style="font-weight: bold; color:blue;"> Descrição -> ' . $produto->descricao . '</li>';
-                    
+
+              foreach($produtos as $produto){
+             
+                     
+             $html  .= '<tr>' . '<td style="color:blue; border:1px solid black; text-align: center;">' . $produto->nome       . '</td>'
+                    .  '<td style="color:blue; border:1px solid black; text-align: center;">' . $produto->descricao           . '</td>'
+                    .  '<td style="color:blue; border:1px solid black; text-align: center;">' . $produto-> quantidade_estoque . '</td>'
+                    .  '</tr>';
+                     
+
               }
 
-             $html .= '</ul>';
+             $html .= '</table>';
+
              return $html;
              //return '<h2>Pegando a rota a partir um método dentro de uma classe</h2>';
        }
 
-      
-
-       public function list(){
-          $X = 0;
-          $Y = 0;
-          $limit = 0;
-          $list = 0;
-          
-          for($i = 0; $i <= $limit; $i++){
-              $X = $i;
-              $Y = $i * $X;
-              $list = $X * $Y;
-
-              echo ($X . $Y . $list);
-
-          }
-       }
-
-
-}
+  }
 
 ?>
