@@ -49,6 +49,14 @@ class ProdutosController extends Controller
              //return '<h2>Pegando a rota a partir um método dentro de uma classe</h2>';
        }
 
+       public function tanques(){
+              
+              
+              $tanqueA = '<div style="width:100px; height:70px; color:#008080;">' . '</div>';
+
+              return $tanqueA;
+       }
+
   }
 
 ?>

@@ -102,7 +102,7 @@ class UsuariosControllers extends Controller
 
     }
 
-    public function updateUsuariosImagem(){
+    public function updateUsuariosImagem(Request $request, int $id){
         $data = $request->only(['imagem']);
 
         $usuario = Usuarios::find($id);
@@ -138,7 +138,7 @@ class UsuariosControllers extends Controller
 
     }
 
-    public function turnUsuario(ind $id)
+    public function turnUsuario(int $id)
     {
         $data =  Usuarios::find($id);
 
